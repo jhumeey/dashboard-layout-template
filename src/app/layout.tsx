@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Fragment, useState } from 'react'
-import { Dialog, Menu, Transition } from '@headlessui/react'
+import { Fragment, useState } from "react";
+import { Dialog, Menu, Transition } from "@headlessui/react";
 import "./globals.css";
+import RootWrapper from "@/components/global/RootWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,9 +13,11 @@ export const metadata: Metadata = {
 };
 
 const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
-  return <div className="bg-gray-250 font-inter">
-
-  </div>;
+  return (
+    <div className="bg-gray-250 font-inter">
+      <RootWrapper>{children}</RootWrapper>
+    </div>
+  );
 };
 
 export default DashboardLayout;

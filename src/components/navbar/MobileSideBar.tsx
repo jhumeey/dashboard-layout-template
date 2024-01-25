@@ -5,9 +5,9 @@ import Image from "next/image";
 import logo from "public/logo.svg";
 import settings from "public/settings.svg";
 import React, { Fragment } from "react";
+import { SidebarProps } from "./types";
 
-const MobileSidebar = () => {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+const MobileSidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <>
       <Transition.Root show={sidebarOpen} as={Fragment}>
@@ -55,15 +55,13 @@ const MobileSidebar = () => {
                       onClick={() => setSidebarOpen(false)}
                     >
                       <span className="sr-only">Close sidebar</span>
-                      
                     </button>
                   </div>
                 </Transition.Child>
                 {/* Sidebar component, swap this element with another sidebar if you like */}
                 <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4">
                   <div className="flex h-16 shrink-0 items-center">
-                    <Image src={logo} alt="logo"/>
-
+                    <Image src={logo} alt="logo" />
                   </div>
                   <nav className="flex flex-1 flex-col">
                     <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -95,13 +93,13 @@ const MobileSidebar = () => {
                           ))}
                         </ul>
                       </li>
-                      
+
                       <li className="mt-auto">
                         <a
                           href="#"
                           className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
                         >
-                         <Image src={settings} alt="settings" />
+                          <Image src={settings} alt="settings" />
                         </a>
                       </li>
                     </ul>

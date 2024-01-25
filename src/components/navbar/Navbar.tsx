@@ -102,3 +102,5 @@ const Navbar = ({ setSidebarOpen }: NavbarProps) => {
     </div>
   );
 };
+
+export default Navbar
