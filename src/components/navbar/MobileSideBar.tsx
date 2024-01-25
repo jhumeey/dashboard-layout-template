@@ -6,7 +6,7 @@ import logo from "public/logo.svg";
 import settings from "public/settings.svg";
 import React, { Fragment } from "react";
 
-const Sidebar = () => {
+const MobileSidebar = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
   return (
     <>
@@ -115,3 +115,5 @@ const Sidebar = () => {
     </>
   );
 };
+
+export default MobileSidebar;
