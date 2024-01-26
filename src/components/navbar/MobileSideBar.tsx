@@ -78,7 +78,8 @@ const MobileSidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                                   "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                 )}
                               >
-                                <item.icon
+                                <Image src={item.icon}  alt={item.name}/>
+                                {/* <item.icon
                                   className={classNames(
                                     item.current
                                       ? "text-indigo-600"
@@ -86,7 +87,7 @@ const MobileSidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                                     "h-6 w-6 shrink-0"
                                   )}
                                   aria-hidden="true"
-                                />
+                                /> */}
                                 {item.name}
                               </a>
                             </li>
