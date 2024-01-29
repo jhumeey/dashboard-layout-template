@@ -9,7 +9,7 @@ const RootWrapper = ({children}: RootProps) => {
     <>
       <MobileSidebar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen} />
       <Desktopbar />
-      <div className="lg:pl-72">
+      <div className="text-black lg:pl-12">
         <Navbar setSidebarOpen={setSidebarOpen} sidebarOpen={sidebarOpen} />
         <main className="py-10">
           <div className="px-4 sm:px-6 lg:px-8">{children}</div>
